@@ -15,15 +15,34 @@
 </head>
 
 <body>
-  <div class="container">
-    <input type="text" id ="task-input" placeholder="Add new task">
-    <button class="btn btn-success btn-input">Add task</button>
-    <ul class="list-group todo-list-ul">
-      <li class="list-group-item">What need to do?</li>
-    </ul>
-  </div>
 
-  <script src = "js/main.js"></script>
+  <div class="container">
+
+    <div class="col">
+      <div class="row">
+        <input type="text" id ="task-input" placeholder="Add new task">
+        <button class="btn btn-success btn-input">Add task</button>
+      </div>
+    </div>
+
+    <br>
+
+    <h3 class="list-group-item">What need to do?</h3>
+
+    <ul class="list-group uncompleted-todo" id = "uncompleted">
+    </ul>
+
+    <br>
+
+    <input type="button" value="Delete" onclick = "removeItem()" />
+    <input type="button" value="Completed" onclick = "completeTask()" />
+
+    <h3>Completed Tasks</h3>
+    <ul class="list-group" id = "completed">
+    </ul>
+
+    <script src = "js/main.js"></script>
+  </div>
 
 </body>
 
