@@ -6,13 +6,12 @@ const tasks = [
   {task: 'Singing'}
 
 ]
-const ul = document.querySelector('.uncompleted-todo');
-
-const li = document.createElement('li');
 
 function addNewTask() {
   const taskInput = document.getElementById('task-input');
+  const ul = document.querySelector('.uncompleted-todo');
 
+  const li = document.createElement('li');
   li.classList.add('list-group-item')
 
   const checkbox = document.createElement('input');
@@ -26,6 +25,8 @@ const btn = document.querySelector('.btn-input');
 btn.addEventListener('click', addNewTask);
 
 function getToDoList(alltask) {
+  const ul = document.querySelector('.uncompleted-todo');
+
 
   const liElements = alltask.map((element) => {
     const li = document.createElement('li');
